@@ -4,6 +4,9 @@
   --color-background: #fff;
   --color-dark: #292929;
   --color-primary: #efbe46;
+
+  --font-sans: "Josefin Sans", sans-serif;
+  --font-serif: "Lora", serif;
 }
 
 body.dark {
