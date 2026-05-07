@@ -1,14 +1,16 @@
-:root {
-  --background: #fff;
-  --text-color: #292929;
-  --primary: #efbe46;
+@import "tailwindcss";
+
+@theme {
+  --color-background: #fff;
+  --color-dark: #292929;
+  --color-primary: #efbe46;
 }
 
 body.dark {
-  --background: #292929;
-  --text-color: #fff;
+  --color-background: #292929;
+  --color-dark: #fff;
 }
 
 body {
-  background-color: var(--background);
+  background-color: var(--color-background);
 }

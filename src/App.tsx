@@ -1,11 +1,12 @@
 import "./App.css";
+import Header from "./components/Header";
 import { ThemeProvider } from "./contexts/theme";
 
 function App() {
   return (
     <>
       <ThemeProvider>
-        <h1>Portfolio</h1>
+        <Header />
       </ThemeProvider>
     </>
   );
