@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ThemeContext from "../contexts/theme";
 import { Lightbulb, LightbulbOff, Menu, X } from "lucide-react";
 
@@ -23,13 +23,31 @@ const menuItems = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const { theme, toggleTheme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <header className="bg-background text-dark p-4 fixed top-0 w-full z-50">
+    <header
+      className={`bg-background text-dark p-4 fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "shadow-md" : ""}`}
+    >
       <div className="xl:container xl:mx-auto xl:flex xl:justify-between xl:items-center">
         <div className="flex items-center justify-between">
           <div>
