@@ -57,7 +57,10 @@ export default function Hero() {
       id="about"
       className="min-h-screen pt-19 flex flex-col relative xl:container xl:mx-auto"
     >
-      <div className="px-2 text-center flex flex-col gap-2 mt-10 text-dark xl:text-left xl:px-40 xl:mt-40">
+      <div
+        style={{ animationDelay: "100ms" }}
+        className="animate-fade-in-up px-2 text-center flex flex-col gap-2 mt-10 text-dark xl:text-left xl:px-40 xl:mt-40"
+      >
         <p className="text-3xl xl:text-6xl font-sans">
           Olá, eu sou o{" "}
           <span className="text-primary font-serif font-bold">Hugo</span>.
@@ -66,7 +69,11 @@ export default function Hero() {
           Desenvolvedor Frontend
         </p>
       </div>
-      <div className="text-dark px-2 flex justify-center gap-4 pt-10 xl:justify-start xl:px-40 xl:pt-15">
+
+      <div
+        style={{ animationDelay: "350ms" }}
+        className="animate-fade-in-up text-dark px-2 flex justify-center gap-4 pt-10 xl:justify-start xl:px-40 xl:pt-15"
+      >
         {xp.map((item) => (
           <div key={item.description} className="flex flex-col">
             <p className="text-5xl xl:text-7xl">
@@ -76,11 +83,19 @@ export default function Hero() {
           </div>
         ))}
       </div>
-      <div className="hidden xl:flex items-center px-40 pt-10 gap-3 animate-pulse text-dark">
-        <p className="text-xl">Role a página </p>
-        <MoveDown />
+
+      <div
+        style={{ animationDelay: "600ms" }}
+        className="animate-fade-in-up hidden xl:flex items-center px-40 pt-10 gap-3 text-dark"
+      >
+        <p className="text-xl animate-pulse">Role a página</p>
+        <MoveDown className="animate-pulse" />
       </div>
-      <div className="absolute bottom-0 left-0 right-0 xl:left-[unset] xl:w-[60%]">
+
+      <div
+        style={{ animationDelay: "200ms" }}
+        className="animate-fade-in absolute bottom-0 left-0 right-0 xl:left-[unset] xl:w-[60%]"
+      >
         <img src={imagemHugo} alt="Hugo" />
       </div>
     </section>
