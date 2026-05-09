@@ -7,6 +7,46 @@ export interface Project {
   category: "Wordpress" | "React / Estudos";
 }
 
+export interface Tech {
+  title: string;
+  items: string[];
+}
+
+export const techs: Tech[] = [
+  {
+    title: "Frontend",
+    items: [
+      "HTML5",
+      "CSS3",
+      "Sass",
+      "Javascript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "React Native",
+      "Tailwind CSS",
+    ],
+  },
+  {
+    title: "Ferramentas",
+    items: ["Git", "Figma", "Vite", "Vercel", "VSCode", "Linux"],
+  },
+  {
+    title: "CMS",
+    items: ["WordPress"],
+  },
+  {
+    title: "Soft Skills",
+    items: [
+      "Entrega de projetos para clientes",
+      "Adaptabilidade",
+      "Aprendizado contínuo",
+      "Comunicação Efetiva",
+      "Background em Design",
+    ],
+  },
+];
+
 export const projects: Project[] = [
   {
     image: "../assets/humanize.png",

@@ -53,9 +53,15 @@ const xp: Xp[] = [
 
 export default function Hero() {
   return (
-    <div className="min-h-screen pt-19 flex flex-col relative xl:container xl:mx-auto">
+    <section
+      id="about"
+      className="min-h-screen pt-19 flex flex-col relative xl:container xl:mx-auto"
+    >
       <div className="px-2 text-center flex flex-col gap-2 mt-10 text-dark xl:text-left xl:px-40 xl:mt-40">
-        <p className="text-3xl xl:text-6xl">Olá, eu sou o Hugo!</p>
+        <p className="text-3xl xl:text-6xl font-sans">
+          Olá, eu sou o{" "}
+          <span className="text-primary font-serif font-bold">Hugo</span>.
+        </p>
         <p className="font-light tracking-widest xl:text-3xl">
           Desenvolvedor Frontend
         </p>
@@ -77,6 +83,6 @@ export default function Hero() {
       <div className="absolute bottom-0 left-0 right-0 xl:left-[unset] xl:w-[60%]">
         <img src={imagemHugo} alt="Hugo" />
       </div>
-    </div>
+    </section>
   );
 }

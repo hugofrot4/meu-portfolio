@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Technologies from "./components/Technologies";
 import { ThemeProvider } from "./contexts/theme";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <ThemeProvider>
         <Header />
         <Hero />
+        <Technologies />
       </ThemeProvider>
     </>
   );

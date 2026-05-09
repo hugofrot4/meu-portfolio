@@ -2,7 +2,24 @@ import { useContext, useState } from "react";
 import ThemeContext from "../contexts/theme";
 import { Lightbulb, LightbulbOff, Menu, X } from "lucide-react";
 
-const menuItems = ["Sobre mim", "Tecnologias", "Projetos", "Contato"];
+const menuItems = [
+  {
+    name: "Sobre mim",
+    href: "#about",
+  },
+  {
+    name: "Tecnologias",
+    href: "#techs",
+  },
+  {
+    name: "Projetos",
+    href: "#projects",
+  },
+  {
+    name: "Contato",
+    href: "#contact",
+  },
+];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -17,7 +34,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <div>
             <h2 className="font-serif text-2xl font-semibold py-1 px-2 border-2 border-dark select-none">
-              Hugo Frota
+              Hugo Frota<span className="text-primary">.</span>
             </h2>
           </div>
           <div className="flex items-center gap-6  xl:hidden">
@@ -32,12 +49,12 @@ export default function Header() {
         >
           <ul className="xl:flex">
             {menuItems.map((item) => (
-              <li key={item}>
+              <li key={item.name}>
                 <a
-                  className="w-full flex justify-center p-2 border-b border-gray-100 xl:border-none xl:p-0 xl:ml-4 xl:w-max xl:relative xl:after:content-[''] xl:after:h-0.5 xl:after:bg-dark xl:after:absolute xl:after:bottom-0 xl:after:right-0 xl:after:w-0 hover:xl:after:w-full xl:after:transition-all xl:after:duration-300 xl:after:ease-in-out"
-                  href="#"
+                  className="w-full flex justify-center p-2 border-b border-gray-100 xl:border-none xl:p-0 xl:ml-4 xl:w-max xl:relative xl:after:content-[''] xl:after:h-0.5 xl:after:bg-primary xl:after:absolute xl:after:bottom-0 xl:after:right-0 xl:after:w-0 hover:xl:after:w-full xl:after:transition-all xl:after:duration-300 xl:after:ease-in-out"
+                  href={item.href}
                 >
-                  {item}
+                  {item.name}
                 </a>
               </li>
             ))}
