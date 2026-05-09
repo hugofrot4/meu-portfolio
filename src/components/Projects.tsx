@@ -3,18 +3,18 @@ import { Code2, ExternalLink } from "lucide-react";
 import { projects, type Project } from "../data/data";
 import Reveal from "./Reveal";
 
-type Tab = "todos" | "clientes" | "pessoais";
+type Tab = "todos" | "html-sass-js" | "react";
 
 const tabs: { id: Tab; label: string }[] = [
   { id: "todos", label: "Todos" },
-  { id: "clientes", label: "Clientes" },
-  { id: "pessoais", label: "Pessoais" },
+  { id: "html-sass-js", label: "HTML & Sass & JS" },
+  { id: "react", label: "React" },
 ];
 
 const descriptions: Record<Tab, string> = {
   todos: "8 projetos · HTML & Sass & JS + React",
-  clientes: "Websites entregues para empresas e organizações reais",
-  pessoais: "Projetos próprios construídos em React",
+  "html-sass-js": "Websites desenvolvidos com HTML, Sass e JavaScript",
+  react: "Projetos desenvolvidos com React",
 };
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
@@ -86,9 +86,9 @@ export default function Projects() {
   const reactProjects = projects.filter((p) => p.category === "React");
 
   const filtered =
-    activeTab === "clientes"
+    activeTab === "html-sass-js"
       ? wordpressProjects
-      : activeTab === "pessoais"
+      : activeTab === "react"
         ? reactProjects
         : projects;
 
