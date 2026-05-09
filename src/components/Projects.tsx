@@ -15,7 +15,7 @@ export default function Projects() {
 
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-2">
-            <h3 className="text-2xl">
+            <h3 className="text-2xl text-dark">
               Projetos WordPress<span className="text-primary">:</span>
             </h3>
             <div className="border-2 border-dark">
@@ -84,7 +84,7 @@ export default function Projects() {
             </div>
           </div>
           <div className="flex flex-col gap-2">
-            <h3 className="text-2xl mb-1">
+            <h3 className="text-2xl text-dark">
               Projetos React<span className="text-primary">:</span>
             </h3>
             <div className="border-2 border-dark">

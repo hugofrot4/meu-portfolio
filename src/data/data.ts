@@ -12,6 +12,11 @@ export interface Tech {
   items: string[];
 }
 
+export interface Contact {
+  url: string;
+  title: string;
+}
+
 export const techs: Tech[] = [
   {
     title: "Frontend",
@@ -124,5 +129,24 @@ export const projects: Project[] = [
     productionUrl: "https://hugocodes-movieslib.netlify.app/",
     repositoryUrl: "https://github.com/HugoCodesBr/movies_lib",
     category: "React",
+  },
+];
+
+export const contacts: Contact[] = [
+  {
+    url: "ttps://mail.google.com/mail/?view=cm&to=herbtyh@gmail.com",
+    title: "E-mail",
+  },
+  {
+    url: "https://www.linkedin.com/in/hugofrotadev/",
+    title: "LinkedIn",
+  },
+  {
+    url: "https://github.com/hugofrot4",
+    title: "Github",
+  },
+  {
+    url: "https://wa.me/5585988710457?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portf%C3%B3lio.",
+    title: "Whatsapp",
   },
 ];
