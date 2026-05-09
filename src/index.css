@@ -17,3 +17,14 @@ body.dark {
 body {
   background-color: var(--color-background);
 }
+
+.swiper-pagination-bullet {
+  background-color: #fff !important;
+  width: 20px !important;
+  height: 20px !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-primary) !important;
+}
